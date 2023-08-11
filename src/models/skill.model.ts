@@ -1,5 +1,5 @@
 export default interface Skill {
-    text: string;
+    title: string;
     icon: string;
     description: string;
     subSkills?: Skill[];

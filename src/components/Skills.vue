@@ -1,5 +1,5 @@
 <template>
-    <v-card color="primary">
+    <v-card elevation="10">
         <v-card-title>
             Skills
         </v-card-title>
@@ -10,7 +10,7 @@
                     :prepend-icon="skill.icon"
                 >
                     <v-list-item-title 
-                        v-text="skill.text"
+                        v-text="skill.title"
                     ></v-list-item-title>
                     <v-list-item-subtitle
                         v-text="skill.description"
@@ -26,17 +26,17 @@ import Skill from '@/models/skill.model';
 
 const skills: Skill[] = [
     {
-        text: "Javascript",
+        title: "Javascript",
         icon: "mdi-language-javascript",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam aliquet. Sed euismod, nisl quis aliquam aliquet, nisl nisi aliquam nunc, vitae aliquam nisl nisl vitae nisl. Sed vitae eros quis nisl aliquam aliquet. Sed euismod, nisl quis aliquam aliquet, nisl nisi aliquam nunc, vitae aliquam nisl nisl vitae nisl."
     },
     {
-        text: "Typescript",
+        title: "Typescript",
         icon: "mdi-language-typescript",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam aliquet. Sed euismod, nisl quis aliquam aliquet, nisl nisi aliquam nunc, vitae aliquam nisl nisl vitae nisl. Sed vitae eros quis nisl aliquam aliquet. Sed euismod, nisl quis aliquam aliquet, nisl nisi aliquam nunc, vitae aliquam nisl nisl vitae nisl."
     },
     {
-        text: "Vue",
+        title: "Vue",
         icon: "mdi-vuejs",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros quis nisl aliquam aliquet. Sed euismod, nisl quis aliquam aliquet, nisl nisi aliquam nunc, vitae aliquam nisl nisl vitae nisl. Sed vitae eros quis nisl aliquam aliquet. Sed euismod, nisl quis aliquam aliquet, nisl nisi aliquam nunc, vitae aliquam nisl nisl vitae nisl."
     },
