@@ -1,12 +1,12 @@
 <template>
     <v-card elevation="10">
         <v-card-title>
-            Experiences - Previous Projects at Fontys
+            Previous Projects at Fontys
         </v-card-title>
         <v-card-text>
             <v-chip 
                 v-for="uniqueSkill, index in uniqueSkills" :key="index"
-                :color="experiences[slide].skillsApplied.some(skill => skill.title === uniqueSkill?.title) ? 'primary' : ''"
+                :color="projects[slide].skillsApplied.some(skill => skill.title === uniqueSkill?.title) ? 'primary' : ''"
                 :prepend-icon="uniqueSkill?.icon"
                 class="mx-2 mb-2"
             >
@@ -14,20 +14,20 @@
             </v-chip>
             <v-carousel v-model="slide" cycle>
                 <v-carousel-item 
-                    v-for="experience, index in experiences" :key="index"
-                    :src="experience.imageUrl"
+                    v-for="project, index in projects" :key="index"
+                    :src="project.imageUrl"
                     cover
                 >
                     <v-card-title>
                         <h1>
-                            {{ experience.company }}
+                            {{ project.company }}
                         </h1>
                         <h2>
-                            {{ experience.project }}
+                            {{ project.project }}
                         </h2>
                     </v-card-title>
                     <v-card-text>
-                        {{ experience.description }}
+                        {{ project.description }}
                     </v-card-text>
                 </v-carousel-item>
             </v-carousel>
@@ -36,12 +36,12 @@
 </template>
 
 <script lang="ts" setup>
-import Experience from '@/models/experience.model';
+import Project from '@/models/project.model';
 import { ref } from 'vue';
 
 const slide = ref(0)
 
-const experiences: Experience[] = [
+const projects: Project[] = [
     {
         company: "OrangeNXT",
         project: "Supply Chain Monitoring using IoT Devices",
@@ -174,6 +174,6 @@ const experiences: Experience[] = [
     },
 ]
 
-const uniqueSkillsTitles = Array.from(new Set(experiences.flatMap(exp => exp.skillsApplied.map(skill => skill.title))))
-const uniqueSkills = uniqueSkillsTitles.map(title => experiences.find(exp => exp.skillsApplied.some(skill => skill.title === title))?.skillsApplied.find(skill => skill.title === title))
+const uniqueSkillsTitles = Array.from(new Set(projects.flatMap(exp => exp.skillsApplied.map(skill => skill.title))))
+const uniqueSkills = uniqueSkillsTitles.map(title => projects.find(exp => exp.skillsApplied.some(skill => skill.title === title))?.skillsApplied.find(skill => skill.title === title))
 </script>

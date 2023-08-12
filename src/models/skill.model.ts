@@ -2,5 +2,10 @@ export default interface Skill {
     title: string;
     icon: string;
     description: string;
-    subSkills?: Skill[];
+    subSkills?: SubSkill[];
+}
+
+interface SubSkill {
+    title: string;
+    description: string;
 }
