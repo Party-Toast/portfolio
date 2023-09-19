@@ -1,45 +1,52 @@
 <template>
-    <v-card elevation="10">
-        <v-card-title>
-            Previous Projects at Fontys
-        </v-card-title>
-        <v-card-text>
+    <v-row>
+        <v-col>
+            <p class="mb-2">
+                Here is an overview of the group projects I have worked on during my studies at Fontys University of Applied Sciences.
+            </p>
             <v-chip 
-                v-for="uniqueSkill, index in uniqueSkills" :key="index"
-                :color="projects[slide].skillsApplied.some(skill => skill.title === uniqueSkill?.title) ? 'primary' : ''"
-                :prepend-icon="uniqueSkill?.icon"
+                v-for="uniqueSkill, index in uniqueSkills.sort((a, b)=>orderSkills(a, b))" :key="index"
+                :color="projects[slide].skillsApplied.some(skill => skill.title === uniqueSkill.title) ? 'primary' : ''"
+                :prepend-icon="uniqueSkill.icon"
                 class="mx-2 mb-2"
             >
-                {{ uniqueSkill?.title }}
+                {{ uniqueSkill.title }}
             </v-chip>
+        </v-col>
+        <v-col cols="8">
             <v-carousel v-model="slide" cycle>
                 <v-carousel-item 
                     v-for="project, index in projects" :key="index"
-                    :src="project.imageUrl"
                     cover
                 >
-                    <v-card-title>
-                        <h1>
-                            {{ project.company }}
-                        </h1>
-                        <h2>
-                            {{ project.project }}
-                        </h2>
-                    </v-card-title>
-                    <v-card-text>
-                        {{ project.description }}
-                    </v-card-text>
+                    <v-parallax
+                        :src="project.imageUrl"
+                        height="100%"
+                    >
+                        <v-card-title>
+                            <h1>
+                                {{ project.company }}
+                            </h1>
+                            <h2>
+                                {{ project.project }}
+                            </h2>
+                        </v-card-title>
+                        <v-card-text>
+                            {{ project.description }}
+                        </v-card-text>
+                    </v-parallax>
                 </v-carousel-item>
             </v-carousel>
-        </v-card-text>
-    </v-card>
+        </v-col>
+    </v-row>
 </template>
 
 <script lang="ts" setup>
 import Project from '@/models/project.model';
+import Skill from '@/models/skill.model';
 import { ref } from 'vue';
 
-const slide = ref(0)
+const slide = ref(0);
 
 const projects: Project[] = [
     {
@@ -172,8 +179,18 @@ const projects: Project[] = [
         ],
         imageUrl: "https://picsum.photos/1920/1080/?random=5"
     },
-]
+];
 
-const uniqueSkillsTitles = Array.from(new Set(projects.flatMap(exp => exp.skillsApplied.map(skill => skill.title))))
-const uniqueSkills = uniqueSkillsTitles.map(title => projects.find(exp => exp.skillsApplied.some(skill => skill.title === title))?.skillsApplied.find(skill => skill.title === title))
+const uniqueSkillsTitles = Array.from(new Set(projects.flatMap(project => project.skillsApplied.map(skill => skill.title))));
+const uniqueSkills = uniqueSkillsTitles.map(title => projects.find(project => project.skillsApplied.some(skill => skill.title === title))?.skillsApplied.find(skill => skill.title === title)).filter((skill): skill is Skill => skill !== undefined);
+
+function orderSkills(a: Skill, b: Skill) {
+    if (a.title < b.title) {
+        return -1;
+    }
+    if (a.title > b.title) {
+        return 1;
+    }
+    return 0;
+}
 </script>

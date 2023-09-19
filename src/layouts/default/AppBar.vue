@@ -1,7 +1,7 @@
 <template>
     <v-app-bar>
         <v-app-bar-title>
-            <b>Portfolio</b> by Sytse Walraven
+            sytse.dev
         </v-app-bar-title>
         <v-spacer />
         <v-menu>
@@ -25,9 +25,9 @@
             </v-list>
         </v-menu>
         <v-btn icon @click="currentTheme = currentTheme === 'dark' ? 'light' : 'dark'">
-            <v-icon v-if="currentTheme === 'dark'">mdi-weather-night</v-icon>
-            <v-icon v-else>mdi-weather-sunny</v-icon>
+            <v-icon>{{ currentTheme === 'dark' ? 'mdi-light-switch-off' : 'mdi-light-switch'}}</v-icon>
         </v-btn>
+        <v-icon class="mr-2">{{ currentTheme === 'dark' ? 'mdi-lightbulb-outline' : 'mdi-lightbulb'}}</v-icon>
     </v-app-bar>
 </template>
 
