@@ -3,10 +3,14 @@
         <v-card-title v-if="slots.title" :class="`bg-${titleColor}`">
             <slot name="title"></slot>
         </v-card-title>
-        <v-divider v-if="!titleColor && slots.title" thickness="2"/>   
+        <!-- TODO: remove line if slot is unused -->
+        <v-divider v-if="!titleColor" thickness="2"/>
         <v-card-text class="pa-4">
             <slot></slot>
         </v-card-text>
+        <v-card-actions v-if="slots.actions">
+            <slot name="actions"></slot>
+        </v-card-actions>
     </v-card>
 </template>
 
@@ -22,6 +26,8 @@ defineProps({
         default: 0
     }
 })
+
+
 
 const slots = useSlots();
 </script>
