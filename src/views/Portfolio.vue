@@ -1,8 +1,12 @@
 <template>
     <v-container class="fill-height">
         <v-responsive class="align-center text-center fill-height">
-            <h1>Portfolio</h1>
-            <p>This is the portfolio page</p>
+            <ProjectsSlides />
         </v-responsive>
     </v-container>
 </template>
+
+<script setup lang="ts">
+import ProjectsSlides from '@/components/ProjectsSlides.vue';
+
+</script>

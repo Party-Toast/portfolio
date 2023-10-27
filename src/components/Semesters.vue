@@ -1,14 +1,17 @@
 <template>
     <v-timeline 
         truncate-line="both"
+        side="end"
+        align="start"
     >
         <v-timeline-item
             v-for="semester, index in semesters" :key="index"
             dot-color="white"
         >
-            <v-expansion-panels class="">
+            <v-expansion-panels class="mt-n1" style="width: 55vw;" variant="popout" selected-class="mt-n5">
                 <v-expansion-panel :bg-color="getColorByType(semester.type)">
                     <template #title >
+                        <b v-if="semester.type">{{ semester.type }} |&nbsp;</b>
                         {{ semester.title }}
                     </template>
                     <template #text>
@@ -17,7 +20,7 @@
                 </v-expansion-panel>
             </v-expansion-panels>
             <template v-if="semester.grade" #opposite>
-                <v-chip color="primary">
+                <v-chip color="primary" class="mt-1">
                     {{ semester.grade }}
                 </v-chip>
             </template>
@@ -56,7 +59,7 @@ const semesters: Semester[] = [
         type: "Specialisation"
     },
     {
-        title: "Internship at ioTracker",
+        title: "ioTracker",
         description: "INSERT DESCRIPTION HERE",
         grade: "Outstanding",
         type: "Internship"

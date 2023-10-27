@@ -1,20 +1,20 @@
 <template>
     <v-row>
-        <v-col>
-            <p class="mb-2">
+        <v-col class="my-auto">
+            <Card>
                 Here is an overview of the group projects I have worked on during my studies at Fontys University of Applied Sciences.
-            </p>
-            <v-chip 
-                v-for="uniqueSkill, index in uniqueSkills.sort((a, b)=>orderSkills(a, b))" :key="index"
-                :color="projects[slide].skillsApplied.some(skill => skill.title === uniqueSkill.title) ? 'primary' : ''"
-                :prepend-icon="uniqueSkill.icon"
-                class="mx-2 mb-2"
-            >
-                {{ uniqueSkill.title }}
-            </v-chip>
+                <v-chip 
+                    v-for="uniqueSkill, index in uniqueSkills.sort((a, b)=>orderSkills(a, b))" :key="index"
+                    :color="projects[slide].skillsApplied.some(skill => skill.title === uniqueSkill.title) ? 'primary' : ''"
+                    :prepend-icon="uniqueSkill.icon"
+                    class="mx-2 mb-2"
+                    >
+                    {{ uniqueSkill.title }}
+                </v-chip>
+            </Card>
         </v-col>
         <v-col cols="8">
-            <v-carousel v-model="slide" cycle>
+            <v-carousel v-model="slide" cycle show-arrows="hover">
                 <v-carousel-item 
                     v-for="project, index in projects" :key="index"
                     cover
@@ -23,17 +23,17 @@
                         :src="project.imageUrl"
                         height="100%"
                     >
-                        <v-card-title>
-                            <h1>
-                                {{ project.company }}
-                            </h1>
-                            <h2>
-                                {{ project.project }}
-                            </h2>
-                        </v-card-title>
-                        <v-card-text>
-                            {{ project.description }}
-                        </v-card-text>
+                            <v-card-title>
+                                <h1>
+                                    {{ project.company }}
+                                </h1>
+                                <h2>
+                                    {{ project.project }}
+                                </h2>
+                            </v-card-title>
+                            <v-card-text>
+                                {{ project.description }}
+                            </v-card-text>
                     </v-parallax>
                 </v-carousel-item>
             </v-carousel>
@@ -44,6 +44,7 @@
 <script lang="ts" setup>
 import Project from '@/models/project.model';
 import Skill from '@/models/skill.model';
+import Card from '@/components/Card.vue';
 import { ref } from 'vue';
 
 const slide = ref(0);
@@ -85,7 +86,7 @@ const projects: Project[] = [
                 description: ""
             }
         ],
-        imageUrl: "https://picsum.photos/1920/1080/?random=1"
+        imageUrl: "https://www.ict.eu/sites/corporate/files/images/orangenxt-mobilenxt-710x375.png"
     },
     {
         company: "Simac IDS",
@@ -113,7 +114,7 @@ const projects: Project[] = [
                 description: ""
             }
         ],
-        imageUrl: "https://picsum.photos/1920/1080/?random=2"
+        imageUrl: "https://www.simac-ids.co.uk/uploads/cache/fb_og_image/uploads/media/5d820843ca2df/simac-sign.jpg"
     },
     {
         company: "Informa Nederland BV",
@@ -131,7 +132,7 @@ const projects: Project[] = [
                 description: ""
             }
         ],
-        imageUrl: "https://picsum.photos/1920/1080/?random=3"
+        imageUrl: "https://www.informa.nl/wp-content/uploads/2018/08/lowHeader_multi.jpg"
     },
     {
         company: "ioThings",
@@ -154,7 +155,7 @@ const projects: Project[] = [
                 description: ""
             },
         ],
-        imageUrl: "https://picsum.photos/1920/1080/?random=4"
+        imageUrl: "https://www.iotracker.nl/uploads/images/3/d/3d0098b28e66386d05dcd7ca768d572926a934c8.jpg"
     },
     {
         company: "BDO Digital",
@@ -177,7 +178,7 @@ const projects: Project[] = [
                 description: ""
             }
         ],
-        imageUrl: "https://picsum.photos/1920/1080/?random=5"
+        imageUrl: "https://www.accountancydaily.co/sites/default/files/styles/media_thumbnail/public/field/image/bdo_291054856_editorial_use_only_2.jpg?itok=MpyXYyro"
     },
 ];
 

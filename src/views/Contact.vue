@@ -1,14 +1,16 @@
 <template>
     <v-container class="fill-height">
         <v-responsive class="align-center fill-height">
-            <h1>Contact</h1>
-            <p>This is the contact page</p>
-            <v-row>
-                <v-col cols="12" md="5">
+            <v-row justify="space-around">
+                <v-col cols="12" md="4" class="my-auto">
                     <Card>
-                        Feel free to contact me using the contact form. I will try to get back to you as soon as possible. 
-                        <br><br>
-                        For additional information, please check out the following resources:
+                        <p>
+                            Feel free to contact me using the contact form. I will try to get back to you as soon as possible. My resume and references are available upon request.
+                        </p>
+                        <br>
+                        <p>
+                            For additional information, please check out the following resources:
+                        </p>
                         <v-list class="pb-0">
                             <v-list-item 
                                 v-for="link, index in links" :key="index"
@@ -123,13 +125,17 @@ const validateAndSendForm = async() => {
 }
 
 const sendEmail = () => {
+    const SERVICE_ID = import.meta.env.VITE_EMAIL_JS_SERVICE_ID as string
+    const TEMPLATE_ID = import.meta.env.VITE_EMAIL_JS_TEMPLATE_ID as string
+    const PUBLIC_KEY = import.meta.env.VITE_EMAIL_JS_PUBLIC_KEY as string
+
     emailSuccess.value = undefined
     sendingEmail.value = true
     emailjs.sendForm(
-        process.env.VUE_APP_EMAIL_JS_SERVICE_ID as string,
-        process.env.VUE_APP_EMAIL_JS_TEMPLATE_ID as string,
+        SERVICE_ID,
+        TEMPLATE_ID,
         'form',
-        process.env.VUE_APP_EMAIL_JS_PUBLIC_KEY as string
+        PUBLIC_KEY
     )
     .then(response => {
         emailSuccess.value = true

@@ -1,18 +1,59 @@
 <template>
     <v-container class="fill-height">
-        <v-responsive class="align-center text-center fill-height">
+        <v-responsive class="align-center fill-height">
             <Card class="mb-4">
                 <template v-slot:title>
-                    The journey so far
+                    Hi there!
                 </template>
-                I've been studying ICT and Software at Fontys University of Applied Sciences since 2019. In that time, I've learned a lot about software development. Here's a timeline of my studies so far. Next to each semester, you can see the grade I received for that semester according to the Fontys ICT grading standard (unsufficient, sufficient, good, outstanding).
+                <v-row>
+                    <v-col>
+                        <p>
+                            My name is Sytse and I'm a ICT & Software student at Fontys University of Applied sciences and a software developer at <a href="https://www.iotracker.eu/" style="text-decoration: none;">ioTracker</a>. 
+                            I have a particular interest in full-stack web development and hardware interfacing, and I'm currently looking for a graduation internship assignment for the period of February 2023 to June 2023.
+                        </p>
+                        <p v-for="hobby, index in hobbies" :key="index">
+                            <br>
+                            <v-icon class="mr-1">{{ hobby.icon }}</v-icon>
+                            {{ hobby.description }}
+                        </p>
+                    </v-col>
+                    <v-col cols="auto" class="ma-auto">
+                        <v-img 
+                            width="250px"
+                            src="../assets/me.jpg"
+                            lazy-src="../assets/me_lowres.jpg"
+                            class="rounded-lg"
+                        />
+                    </v-col>
+                </v-row>
             </Card>
-            <Semesters />
         </v-responsive>
     </v-container>
 </template>
 
 <script lang="ts" setup>
-import Semesters from '@/components/Semesters.vue'
 import Card from '@/components/Card.vue';
+
+const hobbies = [
+    {
+        icon: "mdi-code-braces",
+        description: "I've been programming since high school, which is where I was inspired to follow my current path as a software developer. Apart from Fontys' assignements, I'm always looking for new things to learn and new projects to work on. From working on this very website and setting up my own home server on a Raspberry Pi, to creating custom software and hardware solutions for my other hobbies."
+    },
+    {
+        icon: "mdi-album",
+        description: "Music is one of my greatest passions. I play the saxophone, collect and listen to vinyl records — especially prog-rock, funk, and soul — and enjoy going to concerts and festivals. Furthermore, I like tinkering with and repairing vintage HiFi equipment."
+    },
+    {
+        icon: "mdi-pot-steam",
+        description: "I love cooking and dining with friends and family and am specifically fond of Mediterranean and Asian cuisine. Experimenting with new recipes and ingredients is one of my favorite ways of finishing a busy day."
+    },
+    {
+        icon: "mdi-dice-3",
+        description: "Whenever possible, I will try to get a group of friends together for a board game night. Longer games and social deduction games are my favorite, but I'm always open to trying something new."
+    },
+    {
+        icon: "mdi-bookshelf",
+        description: "If I'm not busy with any of the above, I'm probably reading a book. I mainly enjoy reading non-fiction, particularly science fiction and adventure novels."
+    }
+]
 </script>
