@@ -1,10 +1,11 @@
 <template>
-    <v-navigation-drawer v-model:model-value="show">
+    <v-navigation-drawer :model-value="props.show" @update:model-value="$emit('showNawDrawerUpdate')">
         <v-list>
             <v-list-item 
                 v-for="nav, index in navs" :key="index"
                 :to="nav.to"
                 :active="nav.to === $route.path"
+                active-color="primary"
             >
                 <template v-slot:prepend>
                     <v-icon>{{ nav.icon }}</v-icon>
@@ -16,7 +17,12 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue';
+
+const props = defineProps({
+    show: {
+        type: Boolean
+    }
+})
 
 const navs = [
     {
@@ -28,11 +34,6 @@ const navs = [
         title: 'Journey so far',
         icon: 'mdi-map',
         to: '/journey'
-    },
-    {
-        title: 'Skills',
-        icon: 'mdi-lightbulb-outline',
-        to: '/skills'
     },
     {
         title: 'Portfolio',
@@ -47,5 +48,4 @@ const navs = [
 
 ]
 
-const show = ref(true)
 </script>

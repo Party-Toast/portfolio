@@ -6,4 +6,5 @@ export default interface Project {
     company: string;
     skillsApplied: Skill[];
     imageUrl: string;
+    type: "Group Project" | "Personal Project" | "Internship Project";
 }

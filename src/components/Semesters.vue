@@ -66,9 +66,9 @@ const semesters: Semester[] = [
     },
     {
         title: "Embrace TEC",
-        grade: "Passed",
+        grade: "Completed",
         type: "Minor",
-        description: "For my minor, I decided to do the Embrace Technology, Entrepreneurship and Creativity minor at Fontys Pulsed. This minor is all about creating a product and bringing it to market. There was an explicit focus on design based working, technical integration, and personal development. I worked on multiple projects with students from varying domains, some completely unrelated to ICT. This was a great experience, as it allowed me to learn about the different ways people approach problems and how we can combine our strengths. For my personal project, I worked on an embedded device which allowed me to connect wirelessly to an old cassette deck and control it and stream music to it using my phone.",
+        description: "For my minor, I decided to do the Embrace Technology, Entrepreneurship and Creativity minor at Fontys Pulsed. The minor was all about creating solutions for various entities within short timeframes. There was an explicit focus on design based working, technical integration, and personal development. I worked on multiple projects with students from varying domains, some completely unrelated to ICT. This was a great experience, as it allowed me to learn about the different ways people approach problems and how we can combine our strengths. For my personal project, I worked on an device (which incorporated a Raspberry Pi and ESP32 microcontroller) that allowed me to connect wirelessly to an old cassette deck and control it and stream music to it using my phone.",
     },
     {
         title: "Enterprise Software Engineering",

@@ -1,9 +1,11 @@
 <template>
     <v-app-bar>
+        <v-app-bar-nav-icon v-if="$vuetify.display.mdAndDown" @click="$emit('burgerClick')"/>
         <v-app-bar-title>
             sytse.dev
         </v-app-bar-title>
         <v-spacer />
+        <v-divider vertical class="mr-2"/>
         <v-menu>
             <template v-slot:activator="{ props }">
                 <v-btn
@@ -19,15 +21,16 @@
                     v-for="(language, index) in languages" :key="index"
                     :value="language.locale"
                     @click="locale = language.locale"
+                    :disabled="language.disabled"
                 >
                     <v-list-item-title>{{ language.title }}</v-list-item-title>
                 </v-list-item>
             </v-list>
         </v-menu>
-        <v-btn icon @click="currentTheme = currentTheme === 'dark' ? 'light' : 'dark'">
+        <!-- <v-btn icon @click="currentTheme = currentTheme === 'dark' ? 'light' : 'dark'">
             <v-icon>{{ currentTheme === 'dark' ? 'mdi-light-switch-off' : 'mdi-light-switch'}}</v-icon>
         </v-btn>
-        <v-icon class="mr-2">{{ currentTheme === 'dark' ? 'mdi-lightbulb-outline' : 'mdi-lightbulb'}}</v-icon>
+        <v-icon class="mr-2">{{ currentTheme === 'dark' ? 'mdi-lightbulb-outline' : 'mdi-lightbulb'}}</v-icon> -->
     </v-app-bar>
 </template>
 
@@ -56,6 +59,7 @@ const languages = [
     {
         title: 'Nederlands',
         locale: 'nl',
+        disabled: true
     }
 ]
 

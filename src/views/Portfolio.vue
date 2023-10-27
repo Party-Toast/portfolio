@@ -1,6 +1,6 @@
 <template>
     <v-container class="fill-height">
-        <v-responsive class="align-center text-center fill-height">
+        <v-responsive class="align-center fill-height">
             <ProjectsSlides />
         </v-responsive>
     </v-container>

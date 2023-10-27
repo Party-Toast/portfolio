@@ -2,19 +2,26 @@
     <v-row>
         <v-col class="my-auto">
             <Card>
-                Here is an overview of the group projects I have worked on during my studies at Fontys University of Applied Sciences.
-                <v-chip 
-                    v-for="uniqueSkill, index in uniqueSkills.sort((a, b)=>orderSkills(a, b))" :key="index"
-                    :color="projects[slide].skillsApplied.some(skill => skill.title === uniqueSkill.title) ? 'primary' : ''"
-                    :prepend-icon="uniqueSkill.icon"
-                    class="mx-2 mb-2"
+                <template v-slot:title>
+                    Portfolio
+                </template>
+                <p class="mb-4">
+                    Here is an overview of the projects I have worked on during my studies at Fontys University of Applied Sciences. Below you will find some of the skills and fields of knowledge that I have applied during these projects.
+                </p>
+                <div class="text-center">
+                    <v-chip 
+                        v-for="uniqueSkill, index in uniqueSkills.sort((a, b)=>orderSkills(a, b))" :key="index"
+                        :color="projects[slide].skillsApplied.some(skill => skill.title === uniqueSkill.title) ? 'primary' : ''"
+                        :prepend-icon="uniqueSkill.icon"
+                        class="mx-2 mb-2"
                     >
-                    {{ uniqueSkill.title }}
-                </v-chip>
+                        {{ uniqueSkill.title }}
+                    </v-chip>
+                </div>
             </Card>
         </v-col>
-        <v-col cols="8">
-            <v-carousel v-model="slide" cycle show-arrows="hover">
+        <v-col cols="12" md="8" class="my-auto">
+            <v-carousel v-model="slide" show-arrows="hover">
                 <v-carousel-item 
                     v-for="project, index in projects" :key="index"
                     cover
@@ -23,17 +30,20 @@
                         :src="project.imageUrl"
                         height="100%"
                     >
-                            <v-card-title>
-                                <h1>
-                                    {{ project.company }}
-                                </h1>
-                                <h2>
-                                    {{ project.project }}
-                                </h2>
-                            </v-card-title>
-                            <v-card-text>
+                        <v-sheet class="text-center" style="background: rgba(0,0,0,0.7);" height="100%"> 
+                            <h1>
+                                {{ project.company }}
+                            </h1>
+                            <h2>
+                                {{ project.project }}
+                            </h2>
+                            <h4>
+                                {{ project.type}}
+                            </h4>
+                            <p>
                                 {{ project.description }}
-                            </v-card-text>
+                            </p>
+                        </v-sheet>
                     </v-parallax>
                 </v-carousel-item>
             </v-carousel>
@@ -50,6 +60,30 @@ import { ref } from 'vue';
 const slide = ref(0);
 
 const projects: Project[] = [
+{
+        company: "ioThings",
+        project: "ioTracker Automated Configuration Tool",
+        description: "Insert description here",
+        skillsApplied: [
+            {
+                title: "Node.js",
+                icon: "mdi-nodejs",
+                description: ""
+            },
+            {
+                title: "IoT",
+                icon: "mdi-access-point",
+                description: ""
+            },
+            {
+                title: "Vue",
+                icon: "mdi-vuejs",
+                description: ""
+            },
+        ],
+        imageUrl: "https://www.iotracker.nl/uploads/images/3/d/3d0098b28e66386d05dcd7ca768d572926a934c8.jpg",
+        type: "Internship Project"
+    },
     {
         company: "OrangeNXT",
         project: "Supply Chain Monitoring using IoT Devices",
@@ -63,11 +97,6 @@ const projects: Project[] = [
             {
                 title: "Google Cloud Platform",
                 icon: "mdi-google-cloud",
-                description: ""
-            },
-            {
-                title: "GitLab",
-                icon: "mdi-gitlab",
                 description: ""
             },
             {
@@ -86,7 +115,8 @@ const projects: Project[] = [
                 description: ""
             }
         ],
-        imageUrl: "https://www.ict.eu/sites/corporate/files/images/orangenxt-mobilenxt-710x375.png"
+        imageUrl: "https://www.ict.eu/sites/corporate/files/images/orangenxt-mobilenxt-710x375.png",
+        type: "Group Project"
     },
     {
         company: "Simac IDS",
@@ -104,17 +134,13 @@ const projects: Project[] = [
                 description: ""
             },
             {
-                title: "GitLab",
-                icon: "mdi-gitlab",
-                description: ""
-            },
-            {
                 title: "MySQL",
                 icon: "mdi-database",
                 description: ""
             }
         ],
-        imageUrl: "https://www.simac-ids.co.uk/uploads/cache/fb_og_image/uploads/media/5d820843ca2df/simac-sign.jpg"
+        imageUrl: "https://www.simac-ids.co.uk/uploads/cache/fb_og_image/uploads/media/5d820843ca2df/simac-sign.jpg",
+        type: "Group Project"
     },
     {
         company: "Informa Nederland BV",
@@ -132,34 +158,12 @@ const projects: Project[] = [
                 description: ""
             }
         ],
-        imageUrl: "https://www.informa.nl/wp-content/uploads/2018/08/lowHeader_multi.jpg"
-    },
-    {
-        company: "ioThings",
-        project: "ioTracker Automated Configuration Tool",
-        description: "Insert description here",
-        skillsApplied: [
-            {
-                title: "Node",
-                icon: "mdi-nodejs",
-                description: ""
-            },
-            {
-                title: "IoT",
-                icon: "mdi-access-point",
-                description: ""
-            },
-            {
-                title: "GitLab",
-                icon: "mdi-gitlab",
-                description: ""
-            },
-        ],
-        imageUrl: "https://www.iotracker.nl/uploads/images/3/d/3d0098b28e66386d05dcd7ca768d572926a934c8.jpg"
+        imageUrl: "https://www.informa.nl/wp-content/uploads/2018/08/lowHeader_multi.jpg",
+        type: "Group Project"
     },
     {
         company: "BDO Digital",
-        project: "",
+        project: "INSERT TITLE",
         description: "Insert description here",
         skillsApplied: [
             {
@@ -178,7 +182,8 @@ const projects: Project[] = [
                 description: ""
             }
         ],
-        imageUrl: "https://www.accountancydaily.co/sites/default/files/styles/media_thumbnail/public/field/image/bdo_291054856_editorial_use_only_2.jpg?itok=MpyXYyro"
+        imageUrl: "https://www.accountancydaily.co/sites/default/files/styles/media_thumbnail/public/field/image/bdo_291054856_editorial_use_only_2.jpg?itok=MpyXYyro",
+        type: "Group Project"
     },
 ];
 
