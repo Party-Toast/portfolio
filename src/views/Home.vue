@@ -13,7 +13,7 @@
                         </p>
                         <p v-for="hobby, index in hobbies" :key="index">
                             <br>
-                            <v-icon class="mr-1">{{ hobby.icon }}</v-icon>
+                            <v-icon class="mr-1" :color="`purple-lighten-${index + 1}`">{{ hobby.icon }}</v-icon>
                             {{ hobby.description }}
                         </p>
                     </v-col>

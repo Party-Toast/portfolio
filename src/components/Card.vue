@@ -1,10 +1,10 @@
 <template>
     <v-card :elevation="elevation" class="rounded-md">
-        <v-card-title v-if="slots.title" :class="`bg-${titleColor}`">
+        <v-card-title v-if="slots.title" class="text-primary">
             <slot name="title"></slot>
         </v-card-title>
         <!-- TODO: remove line if slot is unused -->
-        <v-divider v-if="!titleColor && slots.title" thickness="2"/>
+        <v-divider v-if="slots.title" thickness="2"/>
         <v-card-text class="pa-4">
             <slot></slot>
         </v-card-text>
@@ -18,9 +18,6 @@
 import { useSlots } from 'vue';
 
 defineProps({
-    titleColor: {
-        type: String
-    },
     elevation: {
         type: Number,
         default: 4

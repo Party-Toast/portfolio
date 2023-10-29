@@ -8,10 +8,15 @@
             v-for="semester, index in semesters" :key="index"
             dot-color="white"
         >
-            <v-expansion-panels class="mt-n1" style="width: 55vw;" variant="popout" selected-class="mt-n5">
+            <v-expansion-panels 
+                class="mt-n1" 
+                selected-class="mt-n5"
+                :style="`width: ${$vuetify.display.mdAndUp ? '50vw' : '65vw'};`" 
+                variant="popout" 
+            >
                 <v-expansion-panel :bg-color="getColorByType(semester.type)">
                     <template #title >
-                        <b v-if="semester.type">{{ semester.type }} |&nbsp;</b>
+                        <b v-if="$vuetify.display.mdAndUp && semester.type">{{ semester.type }} |&nbsp;</b>
                         {{ semester.title }}
                     </template>
                     <template #text>
@@ -19,14 +24,13 @@
                     </template>
                 </v-expansion-panel>
             </v-expansion-panels>
-            <template v-if="semester.grade" #opposite>
+            <template v-if="$vuetify.display.mdAndUp && semester.grade" #opposite>
                 <v-chip color="primary" class="mt-1">
                     {{ semester.grade }}
                 </v-chip>
             </template>
             <template #icon>
-                <v-icon v-if="semester.grade">mdi-numeric-{{ index + 1 }}-circle</v-icon>
-                <v-icon v-else>mdi-numeric-{{ index + 1 }}-circle-outline</v-icon>
+                <v-icon color="purple-darken-3">mdi-numeric-{{ index + 1 }}-circle{{ semester.grade ? '' : '-outline' }}</v-icon>
             </template>
         </v-timeline-item>
     </v-timeline>
@@ -85,13 +89,13 @@ const semesters: Semester[] = [
 function getColorByType(type: Semester["type"]) {
     switch(type) {  
         case "Internship":
-            return "green"
+            return "purple-darken-1"
         case "Minor": 
-            return "yellow"
+            return "purple-lighten-2"
         case "Specialisation":
-            return "red";
+            return "purple-lighten-1";
         default: 
-            return "blue"
+            return "primary"
     }
 }
 

@@ -91,7 +91,7 @@ const projects: Project[] = [
         skillsApplied: [
             {
                 title: "React",
-                icon: "mdi-vuejs",
+                icon: "mdi-react",
                 description: ""
             },
             {

@@ -1,11 +1,16 @@
 <template>
-    <v-navigation-drawer :model-value="props.show" @update:model-value="$emit('showNawDrawerUpdate')">
+    <v-navigation-drawer 
+        :model-value="props.show" 
+        @update:model-value="$emit('showNawDrawerUpdate')"
+    >
         <v-list>
             <v-list-item 
                 v-for="nav, index in navs" :key="index"
                 :to="nav.to"
                 :active="nav.to === $route.path"
                 active-color="primary"
+                rounded
+                class="mx-1 mb-1"
             >
                 <template v-slot:prepend>
                     <v-icon>{{ nav.icon }}</v-icon>

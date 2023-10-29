@@ -1,7 +1,7 @@
 <template>
     <v-container class="fill-height">
         <v-responsive class="align-center fill-height">
-            <Card class="mb-6 mx-auto" :width="$vuetify.display.mdAndUp ? '90%' : '100%'">
+            <Card class="mb-6 mx-auto" :width="$vuetify.display.lgAndUp ? '85%' : '100%'">
                 <template v-slot:title>
                     Journey so far
                 </template>

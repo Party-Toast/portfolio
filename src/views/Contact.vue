@@ -17,6 +17,7 @@
                                 rounded
                                 :prepend-icon="link.icon"
                                 @click="openUrl(link.url)"
+                                color="primary"
                             >   
                                 <v-list-item-title>{{ link.title }}</v-list-item-title>
                             </v-list-item>

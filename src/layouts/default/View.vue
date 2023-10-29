@@ -1,9 +1,7 @@
 <template>
     <v-main>
-        <router-view />
+        <v-slide-y-reverse-transition>
+            <router-view />
+        </v-slide-y-reverse-transition>
     </v-main>
 </template>
-
-<script lang="ts" setup>
-  //
-</script>

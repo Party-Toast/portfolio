@@ -1,10 +1,9 @@
 <template>
     <v-app-bar>
         <v-app-bar-nav-icon v-if="$vuetify.display.mdAndDown" @click="$emit('burgerClick')"/>
-        <v-app-bar-title>
-            sytse.dev
+        <v-app-bar-title class="text-h5">
+            <span class="text-primary">{&nbsp;</span>sytse<span class="text-primary">.dev</span><span class="text-primary">&nbsp;}</span>
         </v-app-bar-title>
-        <v-spacer />
         <v-divider vertical class="mr-2"/>
         <v-menu>
             <template v-slot:activator="{ props }">
