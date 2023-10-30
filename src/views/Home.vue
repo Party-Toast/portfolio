@@ -37,11 +37,11 @@ import Card from '@/components/Card.vue';
 const hobbies = [
     {
         icon: "mdi-code-braces",
-        description: "I've been programming since high school, which is where I was inspired to follow my current path as a software developer. Apart from Fontys' assignements, I'm always looking for new things to learn and new projects to work on. From working on this very website and setting up my own home server on a Raspberry Pi, to creating custom software and hardware solutions for my other hobbies."
+        description: "I've been programming since high school, which is where I was inspired to follow my current path as a software developer. Apart from Fontys' assignments, I'm always looking for new things to learn and new projects to work on. From working on this very website and setting up my own home server on a Raspberry Pi, to creating custom software and hardware solutions for my other hobbies."
     },
     {
         icon: "mdi-album",
-        description: "Music is one of my greatest passions. I play the saxophone, collect and listen to vinyl records — especially prog-rock, funk, and soul — and enjoy going to concerts and festivals. Furthermore, I like tinkering with and repairing vintage HiFi equipment."
+        description: "Music is one of my greatest passions. I play the saxophone, collect and listen to vinyl records — especially funk, soul, and prog-rock — and enjoy going to concerts and festivals. Furthermore, I like tinkering with and repairing vintage HiFi equipment."
     },
     {
         icon: "mdi-pot-steam",

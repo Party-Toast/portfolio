@@ -4,7 +4,7 @@
         <v-app-bar-title class="text-h5">
             <span class="text-primary">{&nbsp;</span>sytse<span class="text-primary">.dev</span><span class="text-primary">&nbsp;}</span>
         </v-app-bar-title>
-        <v-divider vertical class="mr-2"/>
+        <v-divider vertical class="mr-2" thickness="2"/>
         <v-menu>
             <template v-slot:activator="{ props }">
                 <v-btn

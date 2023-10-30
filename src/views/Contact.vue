@@ -17,7 +17,6 @@
                                 rounded
                                 :prepend-icon="link.icon"
                                 @click="openUrl(link.url)"
-                                color="primary"
                             >   
                                 <v-list-item-title>{{ link.title }}</v-list-item-title>
                             </v-list-item>
@@ -86,14 +85,14 @@ const links = [
         url: 'https://www.linkedin.com/in/sytse-walraven/'
     },
     {
-        title: 'GitLab',
-        icon: 'mdi-gitlab',
-        url: 'https://gitlab.com/sytsewalraven'
-    },
-    {
         title: 'GitHub',
         icon: 'mdi-github',
         url: 'https://github.com/Party-Toast'
+    },
+    {
+        title: 'GitLab',
+        icon: 'mdi-gitlab',
+        url: 'https://gitlab.com/sytsewalraven'
     }
 ]
 
