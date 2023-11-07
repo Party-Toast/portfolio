@@ -41,7 +41,7 @@ const hobbies = [
     },
     {
         icon: "mdi-album",
-        description: "Music is one of my greatest passions. I play the saxophone, collect and listen to vinyl records — especially funk, soul, and prog-rock — and enjoy going to concerts and festivals. Furthermore, I like tinkering with and repairing vintage HiFi equipment."
+        description: "Music is one of my greatest passions. I play the saxophone, collect and listen to vinyl records — especially funk, soul, and prog-rock — and enjoy going to concerts and festivals. In addition, I like tinkering with and repairing vintage HiFi equipment."
     },
     {
         icon: "mdi-pot-steam",
