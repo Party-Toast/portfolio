@@ -8,8 +8,8 @@
                 <v-row>
                     <v-col>
                         <p>
-                            My name is Sytse and I'm a ICT & Software student at Fontys University of Applied sciences and a software developer at <a href="https://www.iotracker.eu/" style="text-decoration: none;">ioTracker</a>. 
-                            I have a particular interest in full-stack web development and hardware interfacing, and I'm currently looking for a graduation internship assignment for the period of February 2023 to June 2023.
+                            My name is Sytse and I'm an ICT & Software student at Fontys University of Applied sciences, graduate intern at <a href="https://www.ict.eu/" style="text-decoration: none;">ICT Group</a>, and a software developer at <a href="https://www.iotracker.eu/" style="text-decoration: none;">ioTracker</a>. 
+                            I have a particular interest in full-stack web development and hardware interfacing, and I'm currently working towards my graduation in July of 2024.
                         </p>
                         <p v-for="hobby, index in hobbies" :key="index">
                             <br>
@@ -53,7 +53,7 @@ const hobbies = [
     },
     {
         icon: "mdi-bookshelf",
-        description: "If I'm not busy with any of the above, I'm probably reading a book. I mainly enjoy reading non-fiction, particularly science fiction and adventure novels."
+        description: "If I'm not busy with any of the above, I'm probably reading a book. I mainly enjoy reading fiction, particularly science fiction and adventure novels."
     }
 ]
 </script>
