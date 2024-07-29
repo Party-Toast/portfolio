@@ -89,9 +89,10 @@ const semesters: Semester[] = [
         grade: "Outstanding"
     },
     {
-        title: "ICT Group",
+        title: "Motar",
         description: "INSERT DESCRIPTION HERE",
-        type: "Graduation Internship"
+        type: "Graduation Internship",
+        grade: "Outstanding"
     },
 
 ]

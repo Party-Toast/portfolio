@@ -8,8 +8,8 @@
                 <v-row>
                     <v-col>
                         <p>
-                            My name is Sytse and I'm an ICT & Software student at Fontys University of Applied sciences, graduate intern at <a href="https://www.ict.eu/" style="text-decoration: none;">ICT Group</a>, and a software developer at <a href="https://www.iotracker.eu/" style="text-decoration: none;">ioTracker</a>. 
-                            I have a particular interest in full-stack web development and hardware interfacing, and I'm currently working towards my graduation in July of 2024.
+                            My name is Sytse and I'm a ICT & Software graduate at Fontys University of Applied sciences, software developer at <a href="https://www.iotracker.eu/" style="text-decoration: none;">ioTracker</a>, and soon-to-be software engineer at <a href="https://www.intraffic.nl/">InTraffic</a>. 
+                            I have a particular interest in full-stack web development and hardware interfacing.
                         </p>
                         <p v-for="hobby, index in hobbies" :key="index">
                             <br>
@@ -36,7 +36,7 @@ import Card from '@/components/Card.vue';
 
 const hobbies = [
     {
-        icon: "mdi-code-braces",
+        icon: "mdi-code-tags",
         description: "I've been programming since high school, which is where I was inspired to follow my current path as a software developer. Apart from Fontys' assignments, I'm always looking for new things to learn and new projects to work on. From working on this very website and setting up my own home server on a Raspberry Pi, to creating custom software and hardware solutions for my other hobbies."
     },
     {

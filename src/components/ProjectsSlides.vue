@@ -65,7 +65,36 @@ import { ref } from 'vue';
 const slide = ref(0);
 
 const projects: Project[] = [
-{
+    {
+        company: "ICT Group/Motar",
+        project: "From low-code to flow-code",
+        description: "ICT Group's Motar branch focuses on the development of low-code solutions. During my graduation internship there, I set out to expand upon their existing Blockly-based low-code editor. I researched and designed a new flow-based programming language that would allow for more complex and dynamic applications to be created. By integrating it into their existing Visual Studio Code extension, it allows domain experts to directly contribute to code whilst enhancing the cooperation with software developers.",
+        skillsApplied: [
+            {
+                title: "TypeScript",
+                icon: "mdi-language-typescript",
+                description: ""
+            },
+            {
+                title: "JavaScript",
+                icon: "mdi-language-javascript",
+                description: ""
+            },
+            {
+                title: "VS Code architecture",
+                icon: "mdi-microsoft-visual-studio-code",
+                description: ""
+            },
+            {
+                title: "Low-code",
+                icon: "mdi-code-braces",
+                description: ""
+            }
+        ],
+        imageUrl: "https://www.ict.eu/sites/corporate/files/images/Motar-Machine_edit%20copy.jpg",
+        type: "Internship Project"
+    },
+    {
         company: "ioThings",
         project: "ioTracker Automated Configuration Tool",
         description: "During my internship at ioThings, I was tasked to create a solution for the manual, time-consuming, and error prone configuration process of the ioTracker IoT device. I researched and designed a custom domain-specific language for storing the configurator protocol specification as code. I then used this specification to generate a dynamic web-based configurator tool that allowed for the automatic generation of configuration downlinks, which could later be transferred to the ioTracker using a mobile app.",
