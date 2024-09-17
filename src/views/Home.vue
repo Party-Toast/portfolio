@@ -8,7 +8,7 @@
                 <v-row>
                     <v-col>
                         <p>
-                            My name is Sytse and I'm a ICT & Software graduate at Fontys University of Applied sciences, software developer at <a href="https://www.iotracker.eu/" style="text-decoration: none;">ioTracker</a>, and soon-to-be software engineer at <a href="https://www.intraffic.nl/">InTraffic</a>. 
+                            My name is Sytse and I'm a ICT & Software graduate at Fontys University of Applied sciences, software engineer at <a href="https://www.intraffic.nl/" style="text-decoration: none;">ICT InTraffic</a>, and developer at <a href="https://www.iotracker.eu/" style="text-decoration: none;">ioTracker</a>. 
                             I have a particular interest in full-stack web development and hardware interfacing.
                         </p>
                         <p v-for="hobby, index in hobbies" :key="index">
