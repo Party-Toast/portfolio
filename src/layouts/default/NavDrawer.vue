@@ -36,7 +36,7 @@ const navs = [
         to: '/'
     },
     {
-        title: 'Journey so far',
+        title: 'Journey',
         icon: 'mdi-map',
         to: '/journey'
     },

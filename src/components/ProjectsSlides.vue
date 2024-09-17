@@ -66,7 +66,7 @@ const slide = ref(0);
 
 const projects: Project[] = [
     {
-        company: "ICT Group/Motar",
+        company: "Motar",
         project: "From low-code to flow-code",
         description: "ICT Group's Motar branch focuses on the development of low-code solutions. During my graduation internship there, I set out to expand upon their existing Blockly-based low-code editor. I researched and designed a new flow-based programming language that would allow for more complex and dynamic applications to be created. By integrating it into their existing Visual Studio Code extension, it allows domain experts to directly contribute to code whilst enhancing the cooperation with software developers.",
         skillsApplied: [

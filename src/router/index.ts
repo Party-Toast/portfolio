@@ -6,31 +6,31 @@ const routes = [
     path: '/',
     component: () => import('@/layouts/default/Default.vue'),
     children: [
-        {
-            path: '',
-            name: 'Home',
-            component: () => import('@/views/Home.vue'),
-        },
-        {
-            path: 'portfolio',
-            name: 'Portfolio',
-            component: () => import('@/views/Portfolio.vue'),
-        },
-        {
-            path: 'journey',
-            name: 'Journey so far',
-            component: () => import('@/views/Journey.vue'),
-        },
-        {
-            path: 'contact',
-            name: 'Contact',
-            component: () => import('@/views/Contact.vue'),
-        },
-        {   
-            path: "/:pathMatch(.*)*", 
-            name: 'PageNotFound',
-            component: () => import('@/views/PageNotFound.vue'), 
-        }
+      {
+        path: '',
+        name: 'Home',
+        component: () => import('@/views/Home.vue'),
+      },
+      {
+        path: 'portfolio',
+        name: 'Portfolio',
+        component: () => import('@/views/Portfolio.vue'),
+      },
+      {
+        path: 'journey',
+        name: 'Journey',
+        component: () => import('@/views/Journey.vue'),
+      },
+      {
+        path: 'contact',
+        name: 'Contact',
+        component: () => import('@/views/Contact.vue'),
+      },
+      {
+        path: "/:pathMatch(.*)*",
+        name: 'PageNotFound',
+        component: () => import('@/views/PageNotFound.vue'),
+      }
     ],
   },
 ];
