@@ -15,13 +15,14 @@
                 <template v-slot:prepend>
                     <v-icon>{{ nav.icon }}</v-icon>
                 </template>
-                <v-list-item-title v-text="nav.title" />
+                <v-list-item-title>{{ nav.title }}</v-list-item-title>
             </v-list-item>
         </v-list>
     </v-navigation-drawer>
 </template>
 
 <script lang="ts" setup>
+import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n();
@@ -32,7 +33,7 @@ const props = defineProps({
     }
 })
 
-const navs = [
+const navs = computed(() => [
     {
         title: t('home.title'),
         icon: 'mdi-hand-wave-outline',
@@ -53,7 +54,6 @@ const navs = [
         icon: 'mdi-email-outline',
         to: '/contact'
     },
-
-]
+])
 
 </script>

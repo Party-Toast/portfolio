@@ -18,8 +18,10 @@
     },
     "home": {
         "title": "Hi there!",
-        "introduction": "My name is Sytse and I'm a cum laude ICT & Software graduate at Fontys University of Applied sciences, software engineer at <a href=\"https:\/\/www.intraffic.nl/\" style=\"text-decoration: none;\">ICT InTraffic</a>, and developer at <a href=\"https:\/\/www.iotracker.eu/\" style=\"text-decoration: none;\">ioTracker</a>. I have a particular interest in full-stack web development and hardware interfacing.",
-        "programming": "I've been programming since high school, which is where I was inspired to follow my current path as a software developer. Apart from Fontys' assignments, I'm always looking for new things to learn and new projects to work on. From working on this very website and setting up my own home server on a Raspberry Pi, to creating custom software and hardware solutions for my other hobbies.",
+        "introduction_1": "My name is Sytse and I'm a cum laude ICT & Software graduate at Fontys University of Applied sciences, software engineer at ",
+        "introduction_2": ", and developer at ",
+        "introduction_3": ". I have a particular interest in full-stack web development and hardware interfacing.",
+        "programming": "I've been programming since high school, which is where I was inspired to follow my current path as a software developer. I'm always looking for new things to learn and new projects to work on. From working on this very website and setting up my own home server on a Raspberry Pi, to creating custom software and hardware solutions for my other hobbies.",
         "music": "Music is one of my greatest passions. I play the saxophone, collect and listen to vinyl records — especially funk, soul, and prog-rock — and enjoy going to concerts and festivals. In addition, I like tinkering with and repairing vintage HiFi equipment.",
         "cooking": "I love cooking and dining with friends and family and am specifically fond of Mediterranean and Asian cuisine. Experimenting with new recipes and ingredients is one of my favorite ways of finishing a busy day.",
         "board_gaming": "Whenever possible, I will try to get a group of friends together for a board game night. Longer games and social deduction games are my favorite, but I'm always open to trying something new.",
@@ -71,7 +73,7 @@
             "rules": {
                 "required": "Required",
                 "character_limit": "{0} cannot be longer than {1} characters",
-                "valid_email": "Email must be valid"
+                "valid_email": "Invalid email address"
             },
             "send": "Send"
         }

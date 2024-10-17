@@ -21,7 +21,7 @@ import nl from '@/locales/nl.json'
 const app = createApp(App);
 
 const i18n = createI18n({
-    locale: 'nl',
+    locale: localStorage.getItem('locale') ?? 'en',
     fallbackLocale: 'en',
     messages: {
         en: en as any,

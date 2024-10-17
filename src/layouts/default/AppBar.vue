@@ -12,14 +12,14 @@
                     v-bind="props"
                     icon
                 >
-                    {{ $i18n.locale }}
+                    {{ locale }}
                 </v-btn>
             </template>
             <v-list>
                 <v-list-item
                     v-for="(language, index) in languages" :key="index"
-                    :value="$i18n.locale"
-                    @click="$i18n.locale = language.locale"
+                    :value="locale"
+                    @click="changeLocale(language.locale)"
                 >
                     <v-list-item-title>{{ language.title }}</v-list-item-title>
                 </v-list-item>
@@ -33,19 +33,9 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, ref } from 'vue';
-import { useTheme } from 'vuetify';
+import { useI18n } from 'vue-i18n';
 
-const theme = useTheme();
-
-const currentTheme = computed({
-    get() {
-        return theme.global.name.value;
-    },
-    set(val) {
-        theme.global.name.value = val;
-    }
-})
+const { locale } = useI18n();
 
 const languages = [
     {
@@ -57,5 +47,11 @@ const languages = [
         locale: 'en',
     }
 ]
+
+const changeLocale = (newLocale: string) => {
+    locale.value = newLocale
+    localStorage.setItem('locale', newLocale)
+}
+
 
 </script>

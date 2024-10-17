@@ -17,16 +17,18 @@
         }
     },
     "home": {
-        "title": "Hallo daar!",
-        "introduction": "Mijn naam is Sytse en ik ben cum laude afgestudeerd aan de opleiding ICT & Software aan de Fontys Hogeschool, software engineer bij <a href=\"https:\/\/www.intraffic.nl/\" style=\"text-decoration: none;\">ICT InTraffic</a>, en ontwikkelaar bij <a href=\"https:\/\/www.iotracker.eu/\" style=\"text-decoration: none;\">ioTracker</a>. Ik heb een bijzondere interesse in full-stack webontwikkeling en hardware interfacing.",
-        "programming": "Ik programmeer al sinds de middelbare school, waar ik geïnspireerd raakte om mijn huidige pad als softwareontwikkelaar te volgen. Naast de opdrachten van Fontys ben ik altijd op zoek naar nieuwe dingen om te leren en nieuwe projecten om aan te werken. Van het werken aan deze website en het opzetten van mijn eigen thuisserver op een Raspberry Pi, tot het creëren van aangepaste software- en hardwareoplossingen voor mijn andere hobby's.",
-        "music": "Muziek is een van mijn grootste passies. Ik speel saxofoon, verzamel en luister naar vinylplaten - vooral funk, soul en prog-rock - en ik ga graag naar concerten en festivals. Daarnaast vind ik het leuk om te knutselen aan en te repareren van vintage HiFi-apparatuur.",
+        "title": "Welkom!",
+        "introduction_1": "Hoi, ik ben Sytse. Ik ben cum laude afgestudeerd aan de opleiding ICT & Software aan de Fontys Hogeschool, software engineer bij ",
+        "introduction_2": " en ontwikkelaar bij ",
+        "introduction_3": ". Ik heb een bijzondere interesse in full-stack webontwikkeling en hardware interfacing.",
+        "programming": "Ik programmeer al sinds de middelbare school, waar ik geïnspireerd raakte om mijn huidige pad als softwareontwikkelaar te volgen. Ik ben altijd op zoek naar nieuwe dingen om te leren en nieuwe projecten om aan te werken. Van het werken aan deze website en het opzetten van mijn eigen thuisserver op een Raspberry Pi tot het creëren van custom software- en hardwareoplossingen voor mijn andere hobby's.",
+        "music": "Muziek is een van mijn grootste passies. Ik speel saxofoon, verzamel en luister naar vinyl - vooral funk, soul en prog-rock - en ik ga graag naar concerten en festivals. Daarnaast vind ik het leuk om te knutselen aan en repareren van vintage HiFi-apparatuur.",
         "cooking": "Ik hou van koken en dineren met vrienden en familie en ben specifiek dol op mediterrane en Aziatische gerechten. Het experimenteren met nieuwe recepten en ingrediënten is een van mijn favoriete manieren om een drukke dag af te sluiten.",
-        "board_gaming": "Wanneer mogelijk, probeer ik een groep vrienden samen te krijgen voor een bordspelavond. Lange spellen en social deduction spellen zijn mijn favoriet, maar ik sta altijd open om iets nieuws te proberen.",
+        "board_gaming": "Wanneer mogelijk, probeer ik een groep vrienden samen te krijgen voor een bordspelavond. Lange en tactische spellen zijn mijn favoriet, maar ik sta altijd open om iets nieuws te proberen.",
         "reading": "Als ik niet bezig ben met een van bovenstaande, dan lees ik waarschijnlijk een boek. Ik geniet vooral van fictie, met name sciencefiction en avonturenromans."
     },
     "journey": {
-        "title": "Onderwijs",
+        "title": "Journey",
         "introduction": "Ik heb van 2019 tot 2024 op Fontys gestudeerd. In die tijd heb ik veel geleerd over softwareontwikkeling en de bijbehorende processen. Hieronder zie je een tijdlijn van mijn studie. Naast elk semester kun je de beoordeling zien die ik voor dat semester heb ontvangen volgens de beoordelingsstandaard van Fontys ICT (onvoldoende, voldoende, goed, uitmuntend)."
     },
     "portfolio": {
@@ -35,34 +37,34 @@
         "projects": {
             "motar": {
                 "title": "Van low-code naar flow-code",
-                "description": "De Motar-afdeling van ICT Group richt zich op de ontwikkeling van low-code oplossingen. Tijdens mijn afstudeerstage daar heb ik onderzoek gedaan naar en ontworpen voor hun bestaande Blockly-gebaseerde low-code editor. Ik heb een nieuwe flow-based programmeertaal onderzocht en ontworpen die complexere en dynamischere applicaties mogelijk maakt. Door deze te integreren in hun bestaande Visual Studio Code-extensie, kunnen domeinexperts direct bijdragen aan code en de samenwerking met softwareontwikkelaars verbeteren."
+                "description": "De Motar-tak van ICT Group richt zich op de ontwikkeling van low-code oplossingen. Tijdens mijn afstudeerstage heb ik onderzoek gedaan naar het uitbereiden van hun bestaande low-code editor gebaseerd op Blockly. Ik heb een nieuwe flow-based programmeertaal onderzocht en ontworpen die complexere en dynamischere applicaties mogelijk maakt. Door deze te integreren in hun bestaande Visual Studio Code-extensie kunnen domeinexperts direct bijdragen aan code om de samenwerking met softwareontwikkelaars te bevorderen."
             },
             "ioThings": {
-                "title": "ioTracker Geautomatiseerd Configuratie Tool",
-                "description": "Tijdens mijn stage bij ioThings kreeg ik de taak om een oplossing te vinden voor het handmatige, tijdrovende, en foutgevoelige configuratieproces van het ioTracker IoT-apparaat. Ik heb onderzocht en een aangepaste domeinspecifieke taal ontworpen voor het opslaan van de configuratorprotocol specificatie als code. Vervolgens heb ik deze specificatie gebruikt om een dynamisch webgebaseerd configuratietool te genereren waarmee automatisch configuratiedownlinks konden worden gegenereerd, die later naar de ioTracker konden worden overgebracht met een mobiele app."
+                "title": "ioTracker geautomatiseerd configuratie tool",
+                "description": "Tijdens mijn stage bij ioThings kreeg ik de taak om een oplossing te vinden voor het handmatige, tijdrovende en foutgevoelige configuratieproces van het ioTracker IoT-apparaat. Ik heb een domeinspecifieke taal ontworpen voor het opslaan van de specificatie van het configuratieprotocol als code. Vervolgens heb ik deze specificatie gebruikt om een dynamisch web-based configuratietool te genereren waarmee automatisch configuratiedownlinks konden worden gegenereerd, die later naar de ioTracker konden worden overgebracht via een mobiele app."
             },
             "orangeNXT": {
-                "title": "Toezicht op de Supply Chain met behulp van IoT-apparaten",
-                "description": "Vanwege de toename van de vraag naar een van hun klantenservices tijdens de pandemie, moest OrangeNXT een oplossing bedenken voor het realtime monitoren van verse voedselproductie, die gemakkelijk aanwezig kon zijn in bestaande standaard leveringsbusjes. We kregen een Ruuvi Tag IoT-apparaat en moesten een webinterface maken om de locatie, temperatuur en luchtvochtigheid van de laadruimte van een bestelbus te volgen. Bovendien zouden meldingen naar de chauffeur en monitoring worden gestuurd als bepaalde sensor drempels werden overschreden."
+                "title": "Supply chain monitoring met behulp van IoT-apparaten",
+                "description": "Vanwege toenemende vraag bij een van haar klanten tijdens de coronapandemie moest OrangeNXT een oplossing bedenken voor het realtime monitoren van verse producten die gemakkelijk geretrofit kon worden in standaard bestelbusjes. We kregen een Ruuvi Tag IoT-apparaat en moesten een webinterface maken om de locatie, temperatuur en luchtvochtigheid van de laadruimte van een bestelbus in de gaten te houden. Bovendien werden meldingen naar de chauffeur en monitor gestuurd als bepaalde drempelwaarden werden overschreden."
             },
             "simacIDS": {
-                "title": "Toegangscontrole Visualisatie",
-                "description": "Simac IDS specialiseert zich in de ontwikkeling van toegangscontrolesystemen. Voor dit project moesten we een webgebaseerd visualisatietool maken voor een realtime toegangscontrolesysteem. We hebben een proof of concept gecreëerd waarbij klanten hun eigen kaarten en plattegronden konden importeren en componenten naar de kaart konden slepen en zetten en aangepaste toegangscontrolezones konden tekenen. Dit maakte het voor klanten mogelijk om hun toegangscontroleomgeving makkelijk te visualiseren en verbeterde de algehele controle-ervaring."
+                "title": "Visualisatie van toegangscontrolesystemen",
+                "description": "Simac IDS specialiseert zich in de ontwikkeling van toegangscontrolesystemen. Voor dit project moesten we een web-based visualisatietool maken voor een realtime toegangscontrolesysteem. We hebben een proof of concept gecreëerd waarbij klanten hun eigen kaarten en plattegronden konden importeren, componenten op de kaart konden slepen en aangepaste toegangscontrolezones konden tekenen. Dit maakte het voor klanten mogelijk om hun toegangscontroleomgeving makkelijk te visualiseren en verbeterde de algehele controle-ervaring."
             },
             "informa": {
-                "title": "Farmaceutische Data Analyse met behulp van Machine Learning",
-                "description": "Tijdens mijn ICT & Artificial Intelligence specialisatie werkte ik aan een team van studenten op een machine learning project voor Informa. Een grote hoeveelheid farmaceutische data werd geleverd en we werd gevraagd om te komen met een out-of-the-box visie op hoe we deze data konden gebruiken om waarde te creëren voor hun klanten. Na het uitvoeren van exploratieve data-analyses en het experimenteren met diverse machine learning modellen, creëerden we een applicatie die verkoopinzichten en suggesties voor de klanten zou geven op basis van hun eigen verkoopdata."
+                "title": "Farmaceutische data-analyse met behulp van machine learning",
+                "description": "Tijdens mijn ICT & Artificial Intelligence specialisatie werkte ik met medestudenten aan een machine learning project voor Informa. We kregen een grote hoeveelheid farmaceutische data en ons werd gevraagd om een out-of-the-box idee te bedenken waarmee deze data gebruikt kon worden om waarde te creëren voor hun klanten. Na het uitvoeren van exploratieve data-analyses en het experimenteren met diverse machine learning modellen, creëerden we een applicatie die verkoopinzichten en suggesties voor de klanten gaf op basis van hun eigen verkoopdata."
             },
             "bdoDigital": {
-                "title": "Data Extractor",
-                "description": "Voor het BDO Data Extractor-project hebben we een proof of concept gemaakt voor een one-size-fits-all data-extractietool waarmee BDO veilig data kon onttrekken van hun klanten voor business intelligence doeleinden. Het gereedschap werd aan de klantzijde geconfigureerd en stelde hen in staat om te specificeren welke data ze met BDO wilden delen en hoe vaak de data moeten worden geëxtraheerd en naar BDO moeten worden gestuurd. De data werd vervolgens opgeslagen in een veilige Azure omgeving waar BDO er toegang tot kon krijgen voor analyse."
+                "title": "Data extractor",
+                "description": "Voor het BDO Data Extractor-project hebben we een proof of concept gemaakt voor een one-size-fits-all data-extractietool waarmee BDO veilig data kon onttrekken van hun klanten voor business intelligence doeleinden. De tool werd aan de klantzijde geconfigureerd en stelde hen in staat om te specificeren welke data ze met BDO wilden delen en hoe vaak de data moet worden geëxtraheerd en naar BDO gestuurd moest worden. De data werd vervolgens opgeslagen in een veilige Azure omgeving waar BDO hun analyseprocessen erop los konden laten."
             }
         }
     },
     "contact": {
         "title": "Contact",
-        "introduction": "Voel je vrij om contact met mij op te nemen via het contactformulier. Ik probeer zo snel mogelijk te antwoorden. Mijn curriculum vitae en referenties zijn op aanvraag beschikbaar.",
-        "additional_information": "Voor extra informatie kun je de volgende bronnen raadplegen:",
+        "introduction": "Voel je vrij om contact met mij op te nemen via het contactformulier. Ik zal proberen zo snel mogelijk te reageren. Mijn CV en referenties zijn op aanvraag beschikbaar.",
+        "additional_information": "Voor extra informatie kun je de volgende links raadplegen:",
         "contact_form": "Contactformulier",
         "form": {
             "name": "Naam",
@@ -71,7 +73,7 @@
             "rules": {
                 "required": "Vereist",
                 "character_limit": "{0} mag niet langer zijn dan {1} tekens",
-                "valid_email": "Email moet geldig zijn"
+                "valid_email": "Ongeldig emailadres"
             },
             "send": "Verzenden"
         }
