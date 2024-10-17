@@ -48,51 +48,46 @@
 
 <script setup lang="ts">
 import Semester from '@/models/semester.model'
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 const semesters: Semester[] = [
     {
         title: "First Semester",
-        description: "INSERT DESCRIPTION HERE",
-        grade: "Outstanding"
+        grade: t('general.grade.outstanding')
     },
     {
         title: "Basic Software Engineering",
-        description: "INSERT DESCRIPTION HERE",
-        grade: "Good"
+        grade: t('general.grade.good')
     },
     {
         title: "Agile Development of Client-server Applications",
-        description: "INSERT DESCRIPTION HERE",
-        grade: "Outstanding"
+        grade: t('general.grade.outstanding')
     },
     {
         title: "ICT & Artificial Intelligence",
-        description: "INSERT DESCRIPTION HERE",
-        grade: "Good",
-        type: "Specialisation"
+        grade: t('general.grade.good'),
+        type: t('general.type.specialisation')
     },
     {
         title: "ioTracker",
-        description: "INSERT DESCRIPTION HERE",
-        grade: "Outstanding",
-        type: "Internship"
+        grade: t('general.grade.outstanding'),
+        type: t('general.type.internship')
     },
     {
         title: "Embrace TEC",
-        grade: "Completed",
-        type: "Minor",
-        description: "For my minor, I decided to do the Embrace Technology, Entrepreneurship and Creativity minor at Fontys Pulsed. The minor was all about creating solutions for various entities within short timeframes. There was an explicit focus on design based working, technical integration, and personal development. I worked on multiple projects with students from varying domains, some completely unrelated to ICT. This was a great experience, as it allowed me to learn about the different ways people approach problems and how we can combine our strengths. For my personal project, I worked on an device (which incorporated a Raspberry Pi and ESP32 microcontroller) that allowed me to connect wirelessly to an old cassette deck and control it and stream music to it using my phone.",
+        grade: t('general.grade.completed'),
+        type: t('general.type.minor'),
     },
     {
         title: "Enterprise Software Engineering",
-        description: "INSERT DESCRIPTION HERE",
-        grade: "Outstanding"
+        grade: t('general.grade.outstanding')
     },
     {
         title: "Motar",
-        description: "INSERT DESCRIPTION HERE",
-        type: "Graduation Internship",
-        grade: "Outstanding"
+        type: t('general.type.graduation_internship'),
+        grade: t('general.grade.outstanding')
     },
 
 ]

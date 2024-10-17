@@ -12,15 +12,14 @@
                     v-bind="props"
                     icon
                 >
-                    {{ locale }}
+                    {{ $i18n.locale }}
                 </v-btn>
             </template>
             <v-list>
                 <v-list-item
                     v-for="(language, index) in languages" :key="index"
-                    :value="language.locale"
-                    @click="locale = language.locale"
-                    :disabled="language.disabled"
+                    :value="$i18n.locale"
+                    @click="$i18n.locale = language.locale"
                 >
                     <v-list-item-title>{{ language.title }}</v-list-item-title>
                 </v-list-item>
@@ -48,17 +47,14 @@ const currentTheme = computed({
     }
 })
 
-const locale = ref('en');
-
 const languages = [
-    {
-        title: 'English',
-        locale: 'en',
-    },
     {
         title: 'Nederlands',
         locale: 'nl',
-        disabled: true
+    },
+    {
+        title: 'English',
+        locale: 'en',
     }
 ]
 

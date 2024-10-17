@@ -5,11 +5,11 @@
                 <v-col cols="12" md="4" class="my-auto">
                     <Card>
                         <p>
-                            Feel free to contact me using the contact form. I will try to get back to you as soon as possible. My resume and references are available upon request.
+                            {{ $t('contact.introduction') }}
                         </p>
                         <br>
                         <p>
-                            For additional information, please check out the following resources:
+                            {{ $t('contact.additional_information') }}
                         </p>
                         <v-list class="pb-0">
                             <v-list-item 
@@ -26,25 +26,25 @@
                 <v-col cols="12" md="7">
                     <Card>
                         <template v-slot:title>
-                            Contact form
+                            {{ $t('contact.contact_form') }}
                         </template>
                         <v-form ref="form" :disabled="sendingEmail">
                             <v-text-field
-                                label="Name"
+                                :label="$t('contact.form.name')"
                                 name="name"
                                 required
                                 :rules="rules.name"
                             />
                             <v-text-field
-                                label="Email"
+                                :label="$t('contact.form.email')"
                                 name="email"
                                 required
                                 :rules="rules.email"
                             />
                             <v-textarea
-                                label="Message"
-                                required
+                                :label="$t('contact.form.message')"
                                 name="message"
+                                required
                                 :rules="rules.message"
                                 counter
                             />
@@ -55,7 +55,7 @@
                                     color="primary"
                                     class="mr-2"
                                 >
-                                    Send
+                                    {{ $t('contact.form.send') }}
                                 </v-btn>
                                 <v-icon v-if="sendingEmail">mdi-loading mdi-spin</v-icon>
                                 <v-icon v-else-if="emailSuccess === false" color="error">mdi-close</v-icon>
@@ -73,6 +73,9 @@
 import Card from "@/components/Card.vue";
 import { ref } from "vue";
 import emailjs from "@emailjs/browser";
+import { useI18n } from "vue-i18n";
+
+const { t } = useI18n();
 
 const form = ref<HTMLFormElement>()
 const sendingEmail = ref(false)
@@ -98,17 +101,17 @@ const links = [
 
 const rules = {
     name: [
-        (v: any) => !!v || "Required",
-        (v: any) => (v && v.length <= 50) || "Name cannot be longer than 50 characters"
+        (v: any) => !!v || t('contact.form.rules.required'),
+        (v: any) => (v && v.length <= 50) || t('contact.form.rules.character_limit', [t('contact.form.name'), 50])
     ],
     email: [
-        (v: any) => !!v || "Required",
-        (v: any) => (v && v.length <= 100) || "Email cannot be longer than 100 characters",
-        (v: any) => /.+@.+\..+/.test(v) || "E-mail must be valid"
+        (v: any) => !!v || t('contact.form.rules.required'),
+        (v: any) => (v && v.length <= 100) || t('contact.form.rules.character_limit', [t('contact.form.email'), 100]),
+        (v: any) => /.+@.+\..+/.test(v) || t('contact.form.rules.valid_email')
     ],
     message: [
-        (v: any) => !!v || "Required",
-        (v: any) => (v && v.length <= 1000) || "Message cannot be longer than 1000 characters"
+        (v: any) => !!v || t('contact.form.rules.required'),
+        (v: any) => (v && v.length <= 1000) || t('contact.form.rules.character_limit', [t('contact.form.message'), 1000])
     ]
 }
 

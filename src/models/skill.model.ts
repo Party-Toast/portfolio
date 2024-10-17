@@ -1,11 +1,8 @@
-export default interface Skill {
+export interface Skill {
     title: string;
     icon: string;
-    description: string;
-    subSkills?: SubSkill[];
 }
 
-interface SubSkill {
-    title: string;
-    description: string;
+export interface Skills {
+    [key: string]: Skill
 }

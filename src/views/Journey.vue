@@ -3,10 +3,10 @@
         <v-responsive class="align-center fill-height">
             <Card class="mb-6 mx-auto" :width="$vuetify.display.lgAndUp ? '85%' : '100%'">
                 <template v-slot:title>
-                    Journey
+                    {{ $t('journey.title')}}
                 </template>
                 <p>
-                    I've studied at Fontys from 2019 to 2024. In that time, I've learned a lot about software development and its envolved processes. Below is a timeline of my studies. Next to each semester, you can see the grade I received for that semester according to the Fontys ICT grading standard (unsufficient, sufficient, good, outstanding). 
+                    {{ $t('journey.introduction')}}
                 </p>
             </Card>
             <Semesters/>

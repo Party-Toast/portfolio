@@ -1,0 +1,84 @@
+{
+    "general": {
+        "grade": {
+            "outstanding": "Outstanding",
+            "good": "Good",
+            "satisfactory": "Satisfactory",
+            "unsatisfactory": "Unsatisfactory",
+            "completed": "Completed"
+        },
+        "type": {
+            "specialisation": "Specialisation",
+            "internship": "Internship",
+            "minor": "Minor",
+            "graduation_internship": "Graduation internship",
+            "group_project": "Group project",
+            "internship_project": "Internship project"
+        }
+    },
+    "home": {
+        "title": "Hi there!",
+        "introduction": "My name is Sytse and I'm a cum laude ICT & Software graduate at Fontys University of Applied sciences, software engineer at <a href=\"https:\/\/www.intraffic.nl/\" style=\"text-decoration: none;\">ICT InTraffic</a>, and developer at <a href=\"https:\/\/www.iotracker.eu/\" style=\"text-decoration: none;\">ioTracker</a>. I have a particular interest in full-stack web development and hardware interfacing.",
+        "programming": "I've been programming since high school, which is where I was inspired to follow my current path as a software developer. Apart from Fontys' assignments, I'm always looking for new things to learn and new projects to work on. From working on this very website and setting up my own home server on a Raspberry Pi, to creating custom software and hardware solutions for my other hobbies.",
+        "music": "Music is one of my greatest passions. I play the saxophone, collect and listen to vinyl records — especially funk, soul, and prog-rock — and enjoy going to concerts and festivals. In addition, I like tinkering with and repairing vintage HiFi equipment.",
+        "cooking": "I love cooking and dining with friends and family and am specifically fond of Mediterranean and Asian cuisine. Experimenting with new recipes and ingredients is one of my favorite ways of finishing a busy day.",
+        "board_gaming": "Whenever possible, I will try to get a group of friends together for a board game night. Longer games and social deduction games are my favorite, but I'm always open to trying something new.",
+        "reading": "If I'm not busy with any of the above, I'm probably reading a book. I mainly enjoy reading fiction, particularly science fiction and adventure novels."
+    },
+    "journey": {
+        "title": "Journey",
+        "introduction": "I've studied at Fontys from 2019 to 2024. In that time, I've learned a lot about software development and its envolved processes. Below is a timeline of my studies. Next to each semester, you can see the grade I received for that semester according to the Fontys ICT grading standard (unsatisfactory, satisfactory, good, outstanding)."
+    },
+    "portfolio": {
+        "title": "Portfolio",
+        "introduction": "Here is an overview of the projects I have worked on during my studies at Fontys University of Applied Sciences. Below you will find some of the skills and knowlegde domains that I have applied during these projects.",
+        "projects": {
+            "motar": {
+                "title": "From low-code to flow-code",
+                "description": "ICT Group's Motar branch focuses on the development of low-code solutions. During my graduation internship there, I set out to expand upon their existing Blockly-based low-code editor. I researched and designed a new flow-based programming language that would allow for more complex and dynamic applications to be created. By integrating it into their existing Visual Studio Code extension, it allows domain experts to directly contribute to code whilst enhancing the cooperation with software developers."
+            },
+            "ioThings": {
+                "title": "ioTracker Automated Configuration Tool",
+                "description": "During my internship at ioThings, I was tasked to create a solution for the manual, time-consuming, and error prone configuration process of the ioTracker IoT device. I researched and designed a custom domain-specific language for storing the configurator protocol specification as code. I then used this specification to generate a dynamic web-based configurator tool that allowed for the automatic generation of configuration downlinks, which could later be transferred to the ioTracker using a mobile app."
+            },
+            "orangeNXT": {
+                "title": "Supply Chain Monitoring using IoT Devices",
+                "description": "Due to increased demand for one of their client's services during the pandemic, OrangeNXT was tasked to create a solution for fresh grocery supply chain monitoring that could easily be retrofitted into existing standard delivery vans. We were given a Ruuvi Tag IoT device and were instructed to created a web interface to monitor the location, temperature, and humidity of the cargo area of a delivery van. Furthermore, notifications would be sent to the driver and monitoring if certain sensor thresholds were exceeded."
+            },
+            "simacIDS": {
+                "title": "Access Control Visualisation",
+                "description": "Simac IDS specialises in the development of access control systems. For this project, we were tasked to create a web-based visualisation tool for a real-time access control system. We created a proof of concept where customers could import their own maps and floor plans, and allowed them to drag and drop components onto the map and draw custom access control zones. This allowed for customers to easily visualise their access control environment and improved the overall monitoring experience."
+            },
+            "informa": {
+                "title": "Pharmaceutical Data Analysis using Machine Learning",
+                "description": "During my ICT & Artificial Intelligence specialisation, I worked with a team of students on a machine learning project for Informa. A large set of pharmaceutical data was provided and we were asked to come up with an out-of-the-box vision on how to use this data to create value for their customers. After performing exploratory data analyses and experimenting with various machine learning models, we created an application that would give sales insights and suggestions for the customers based on their own sales data."
+            },
+            "bdoDigital": {
+                "title": "Data Extractor",
+                "description": "For the BDO Data Extractor project, we created a proof of concept for a one-size-fits-all data extraction tool that allowed BDO to safely extract data from their clients for business intelligence purposes. The tool was configured on the client's side and allowed for them to specify which data they wanted to share with BDO and how often the data should be extracted and sent to BDO. The data would then be stored in a secure Azure environment where it could be accessed by BDO for analysis."
+            }
+        }
+    },
+    "contact": {
+        "title": "Contact",
+        "introduction": "Feel free to contact me using the contact form. I will try to get back to you as soon as possible. My resume and references are available upon request.",
+        "additional_information": "For additional information, please check out the following resources:",
+        "contact_form": "Contact form",
+        "form": {
+            "name": "Name",
+            "email": "Email",
+            "message": "Message",
+            "rules": {
+                "required": "Required",
+                "character_limit": "{0} cannot be longer than {1} characters",
+                "valid_email": "Email must be valid"
+            },
+            "send": "Send"
+        }
+    },
+    "pageNotFound": {
+        "whoops": "Whoops!",
+        "title": "404 - Page not found",
+        "information": "Sorry, the page you are looking for does not exist."
+    }
+}

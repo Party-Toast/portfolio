@@ -1,10 +1,10 @@
-import Skill from "./skill.model";
+import { Skill } from "./skill.model";
 
 export default interface Project {
-    project: string;
+    title: string;
     description: string;
     company: string;
     skillsApplied: Skill[];
     imageUrl: string;
-    type: "Group Project" | "Personal Project" | "Internship Project";
+    type: string
 }

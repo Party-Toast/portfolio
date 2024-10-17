@@ -8,7 +8,7 @@
                 v-for="nav, index in navs" :key="index"
                 :to="nav.to"
                 :active="nav.to === $route.path"
-                active-color="primary"
+                color="primary"
                 rounded
                 class="mx-1 mb-1"
             >
@@ -22,6 +22,9 @@
 </template>
 
 <script lang="ts" setup>
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 const props = defineProps({
     show: {
@@ -31,22 +34,22 @@ const props = defineProps({
 
 const navs = [
     {
-        title: 'Hi there!',
+        title: t('home.title'),
         icon: 'mdi-hand-wave-outline',
         to: '/'
     },
     {
-        title: 'Journey',
+        title: t('journey.title'),
         icon: 'mdi-map',
         to: '/journey'
     },
     {
-        title: 'Portfolio',
+        title: t('portfolio.title'),
         icon: 'mdi-briefcase-outline',
         to: '/portfolio'
     },
     {
-        title: 'Contact',
+        title: t('contact.title'),
         icon: 'mdi-email-outline',
         to: '/contact'
     },
