@@ -3,10 +3,10 @@
         <v-col class="my-auto">
             <Card>
                 <template v-slot:title>
-                    {{ $t('portfolio.title') }}
+                    {{ t('portfolio.title') }}
                 </template>
                 <p class="mb-4">
-                    {{ $t('portfolio.introduction') }}
+                    {{ t('portfolio.introduction') }}
                 </p>
                 <div class="text-center">
                     <v-chip 

@@ -3,15 +3,15 @@
         <v-responsive class="align-center fill-height">
             <Card class="mb-4">
                 <template v-slot:title>
-                    {{ $t('home.title') }}
+                    {{ t('home.title') }}
                 </template>
                 <v-row>
                     <v-col>
-                        <span>{{ $t('home.introduction_1') }}</span>
+                        <span>{{ t('home.introduction_1') }}</span>
                         <a href="https://www.intraffic.nl/" style="text-decoration: none;">ICT InTraffic</a>
-                        <span>{{ $t('home.introduction_2') }}</span>
+                        <span>{{ t('home.introduction_2') }}</span>
                         <a href="https://www.iotracker.nl/" style="text-decoration: none;">ioThings</a>
-                        <span>{{ $t('home.introduction_3') }}</span>
+                        <span>{{ t('home.introduction_3') }}</span>
                         <p v-for="hobby, index in hobbies" :key="index">
                             <br>
                             <v-icon class="mr-1" :color="`purple-lighten-${index + 1}`">{{ hobby.icon }}</v-icon>

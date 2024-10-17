@@ -81,6 +81,6 @@
     "pageNotFound": {
         "whoops": "Oeps!",
         "title": "404 - Pagina niet gevonden",
-        "information": "Sorry, de pagina waarnaar je op zoek bent, bestaat niet."
+        "information": "Sorry, de pagina waarnaar je op zoek bent bestaat niet."
     }
 }

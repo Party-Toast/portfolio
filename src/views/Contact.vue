@@ -5,11 +5,11 @@
                 <v-col cols="12" md="4" class="my-auto">
                     <Card>
                         <p>
-                            {{ $t('contact.introduction') }}
+                            {{ t('contact.introduction') }}
                         </p>
                         <br>
                         <p>
-                            {{ $t('contact.additional_information') }}
+                            {{ t('contact.additional_information') }}
                         </p>
                         <v-list class="pb-0">
                             <v-list-item 
@@ -26,23 +26,23 @@
                 <v-col cols="12" md="7">
                     <Card>
                         <template v-slot:title>
-                            {{ $t('contact.contact_form') }}
+                            {{ t('contact.contact_form') }}
                         </template>
                         <v-form ref="form" :disabled="sendingEmail">
                             <v-text-field
-                                :label="$t('contact.form.name')"
+                                :label="t('contact.form.name')"
                                 name="name"
                                 required
                                 :rules="rules.name"
                             />
                             <v-text-field
-                                :label="$t('contact.form.email')"
+                                :label="t('contact.form.email')"
                                 name="email"
                                 required
                                 :rules="rules.email"
                             />
                             <v-textarea
-                                :label="$t('contact.form.message')"
+                                :label="t('contact.form.message')"
                                 name="message"
                                 required
                                 :rules="rules.message"
@@ -55,7 +55,7 @@
                                     color="primary"
                                     class="mr-2"
                                 >
-                                    {{ $t('contact.form.send') }}
+                                    {{ t('contact.form.send') }}
                                 </v-btn>
                                 <v-icon v-if="sendingEmail">mdi-loading mdi-spin</v-icon>
                                 <v-icon v-else-if="emailSuccess === false" color="error">mdi-close</v-icon>
