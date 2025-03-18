@@ -8,10 +8,8 @@
                 <v-row>
                     <v-col>
                         <span>{{ t('home.introduction_1') }}</span>
-                        <a href="https://www.intraffic.nl/" style="text-decoration: none;">ICT InTraffic</a>
+                        <a href="https://www.keronic.com/" style="text-decoration: none;">Keronic</a>
                         <span>{{ t('home.introduction_2') }}</span>
-                        <a href="https://www.iotracker.nl/" style="text-decoration: none;">ioThings</a>
-                        <span>{{ t('home.introduction_3') }}</span>
                         <p v-for="hobby, index in hobbies" :key="index">
                             <br>
                             <v-icon class="mr-1" :color="`purple-lighten-${index + 1}`">{{ hobby.icon }}</v-icon>

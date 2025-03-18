@@ -18,9 +18,8 @@
     },
     "home": {
         "title": "Hi there!",
-        "introduction_1": "My name is Sytse and I'm a cum laude ICT & Software graduate at Fontys University of Applied sciences, software engineer at ",
-        "introduction_2": ", and developer at ",
-        "introduction_3": ". I have a particular interest in full-stack web development and hardware interfacing.",
+        "introduction_1": "My name is Sytse! I'm a GE Smallworld consultant at ",
+        "introduction_2": " and a cum laude ICT & Software graduate of Fontys University of Applied sciences in Eindhoven. I have a particular interest in full-stack development and hardware interfacing.",
         "programming": "I've been programming since high school, which is where I was inspired to follow my current path as a software developer. I'm always looking for new things to learn and new projects to work on. From working on this very website and setting up my own home server on a Raspberry Pi, to creating custom software and hardware solutions for my other hobbies.",
         "music": "Music is one of my greatest passions. I play the saxophone, collect and listen to vinyl records — especially funk, soul, and prog-rock — and enjoy going to concerts and festivals. In addition, I like tinkering with and repairing vintage HiFi equipment.",
         "cooking": "I love cooking and dining with friends and family and am specifically fond of Mediterranean and Asian cuisine. Experimenting with new recipes and ingredients is one of my favorite ways of finishing a busy day.",
